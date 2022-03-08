@@ -1,38 +1,49 @@
 {
-	"name": "Sub-Muxer",
-	"description": "Telegram bot to mux subtitles with the video",
-	"keywords": [
-		"telegram-bot",
-		"subtitles",
-		"muxing"
-	],
-	"repository": "https://github.com/mohdsabahat/sub-muxer",
-	"formation": {
+    "name": "Telegram Video Watermark Adder Bot",
+    "description": "A Telegram Video Watermark Adder Bot in Pyrogram by @AbirHasan2005",
+    "keywords": [
+        "telegram",
+        "files",
+        "store",
+        "bot"
+    ],
+    "repository": "https://github.com/AbirHasan2005/Watermark-Bot",
+    "formation": {
 		"worker": {
 			"quantity": 1,
 			"size": "free"
-		}
-	},
-	"env": {
-		"BOT_TOKEN": {
-			"description": "Telegram bot token. get it from botfather"
-		},
-		"API_HASH": {
-			"description": "API Hash of your app"
-		},
-		"APP_ID": {
-			"description": "App Id of your app."
-		},
-		"ALLOWED_USERS": {
-			"description": "User id of users seperated by a comma allowed to use the bot."
-		}
-	},
-	"buildpacks": [
-		{
-			"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-		},
-		{
-			"url": "heroku/python"
-		}
-	]
+                }
+    }, 
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather XD"
+        },
+        "BOT_USERNAME": {
+            "description": "Your Bot Username which you sent to @BotFather (Without [@])"
+        },
+        "ALLOWED_USERS": {
+            "description": "User id of users seperated by a comma allowed to use the bot"
+        }
+    },
+    "buildpacks": [ 
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }, 
+        { 
+            "url": "heroku/python"
+        }
+    ],
+    "stack": "heroku-20",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
